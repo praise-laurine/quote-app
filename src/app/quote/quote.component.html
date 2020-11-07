@@ -9,12 +9,12 @@
 
     <div class="row">
         <div class="col-md-5">
-            <div *ngFor='let quote of quotes'>
+            <div *ngFor='let quote of quotes;let i = index'>
                 <div class="card" id="top-card">
                     <div *ngFor='let quote of quotes'>
                         {{quote.quoteName}}
                         <button (click)='toggleDetails(i)'>Toggle Details</button>
-                        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>
+                        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'complete Quote($event,i)'></app-quote-detail>
                     </div>
                     
 
