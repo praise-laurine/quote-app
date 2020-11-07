@@ -13,8 +13,11 @@
                 <div class="card" id="top-card">
                     <div *ngFor='let quote of quotes'>
                         {{quote.quoteName}}
-                        <app-quote-detail [quote]='quote'></app-quote-detail>
+                        <button (click)='toggleDetails(i)'>Toggle Details</button>
+                        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote'></app-quote-detail>
                     </div>
+                    
+
             
 
                 </div>
@@ -35,7 +38,7 @@
     }
     
     .col-md-5{
-        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
 </style>
 
