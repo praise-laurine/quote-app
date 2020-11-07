@@ -1,1 +1,55 @@
-<p>quote works!</p>
+<!-- <p>quote works!</p> -->
+<link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+
+<body>
+    <div class="container">
+    <div class="title">
+        <h1>Inspirational Quotes</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5">
+            <div *ngFor='let quote of quotes'>
+                <div class="card" id="top-card">
+                  <p class="card-title"> {{quote.quoteName}} </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+        
+
+    </div>
+</body>
+
+
+<style>
+    .container{
+        font-family: 'Gabriela', serif;
+    }
+    
+    .col-md-5{
+        padding-bottom: 20px;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
