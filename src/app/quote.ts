@@ -3,8 +3,8 @@ export class Quote {
     // quoteName:string;
     // description:string;
 
-    showDescription: boolean;
-    constructor(public id: number,public quoteName: string,public description: string){
+    public showDescription: boolean;
+    constructor(public id: number,public quoteName: string,public description: string,public completeDate: Date){
         this.showDescription=false;
     }
 }
