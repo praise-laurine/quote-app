@@ -12,7 +12,9 @@
             <div *ngFor='let quote of quotes;let i = index'>
                 <div class="card" id="top-card">
                     <div *ngFor='let quote of quotes'>
-                        {{quote.quoteName}}
+                        <h6 appStrikethrough>{{quote.quoteName}} due on {{quote.completeDate|date|uppercase}}</h6> 
+
+                        <!-- {{quote.quoteName}} -->
                         <button (click)='toggleDetails(i)'>Toggle Details</button>
                         <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
                     </div>
