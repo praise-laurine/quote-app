@@ -11,7 +11,11 @@
         <div class="col-md-5">
             <div *ngFor='let quote of quotes'>
                 <div class="card" id="top-card">
-                  <p class="card-title"> {{quote.quoteName}} </p>
+                    <div *ngFor='let quote of quotes'>
+                        {{quote.quoteName}}
+                        <app-quote-detail [quote]='quote'></app-quote-detail>
+                    </div>
+            
 
                 </div>
 
