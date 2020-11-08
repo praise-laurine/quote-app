@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    background-image: url(./assets/istockphoto-1138395421-612x612.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+
