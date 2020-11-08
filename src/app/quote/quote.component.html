@@ -18,14 +18,13 @@
                         <button (click)='toggleDetails(i)' class="btn btn-primary">View Details</button>
                         <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
                     </div>
-                    
-
-            
-
-                </div>
-
+                </div> 
             </div>
         </div>
+            <div class="col-md-5">
+                <app-quote-form></app-quote-form>
+            </div>
+        
     </div>
     
         
