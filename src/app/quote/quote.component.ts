@@ -1,4 +1,4 @@
-import { Component, OnInit,} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Quote }from  '../quote'; 
 @Component({
   selector: 'app-quote',
@@ -8,7 +8,7 @@ import { Quote }from  '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[]=[
-    new Quote(1, 'Push yourself beacause no one is going to fo it for you', 'By Laurine Praise',new Date(2020,3,14)),
+    new Quote(1, 'Push yourself beacause no one is going to do it for you', 'By Laurine Praise',new Date(2020,3,14)),
     new Quote(2, 'The harder you work on something, the greater you will feel when you achive it', 'By John Campbell',new Date(2020,6,9)),
     new Quote(3, 'The way to get started is to quit talking and begin doing', 'By Walt Disney',new Date(2020,0,12)),
     new Quote(4, 'If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You', 'By Steve Jobs',new Date(2019,6,18)),

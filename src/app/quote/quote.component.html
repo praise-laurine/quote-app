@@ -2,66 +2,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
 
 <body>
-    <div class="container">
+  <div class="container">
     <div class="title">
-        <h1>Inspirational Quotes</h1>
+      <h1>Inspirational Quotes</h1>
     </div>
 
     <div class="row">
-        <div class="col-md-5">
-            <div *ngFor='let quote of quotes;let i = index'>
-                <div class="card" id="top-card">
-                    <div *ngFor='let quote of quotes'>
-                        <h6 appStrikethrough>{{quote.quoteName}} due on {{quote.completeDate|date|uppercase}}</h6> 
+      <div class="col-md-5">
+        <div *ngFor='let quote of quotes;let i = index'>
+          <div class="card" id="top-card">
+            <h6 appStrikethrough>{{quote.quoteName}} due on {{quote.completeDate|date|uppercase}}</h6>
 
-                        <!-- {{quote.quoteName}} -->
-                        <button (click)='toggleDetails(i)' class="btn btn-primary">View Details</button>
-                        <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
-                    </div>
-                </div> 
-            </div>
+            <!-- {{quote.quoteName}} -->
+            <button (click)='toggleDetails(i)' class="btn btn-primary">View Details</button>
+            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+            </app-quote-detail>
+          </div>
+
         </div>
-            <div class="col-md-5">
+      </div>
+      <!-- <div class="col-md-5">
                 <app-quote-form></app-quote-form>
-            </div>
+            </div> -->
 
-            <div class="col-md-6">
-                <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-           </div
-        
-        </div>
-    
-        
-
+      <div class="col-md-6">
+        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+      </div>
     </div>
+  </div>
 </body>
 
 
 <style>
-    .container{
-        font-family: 'Gabriela', serif;
-    }
-    
-    .col-md-5{
-        margin-bottom: 20px;
-    }
+  .container {
+    font-family: 'Gabriela', serif;
+  }
+
+  .col-md-5 {
+    margin-bottom: 20px;
+  }
+
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
