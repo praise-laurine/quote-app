@@ -5,6 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Description
  This is an angular app for quotes where a user can add a quote and can also like or dislike(upvote or downvote) other user's quotes.
 
+ # Author
+ Laurine Praise
+
  # Languages
  - Agular CLI
  - Typescript

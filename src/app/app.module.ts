@@ -10,6 +10,7 @@ import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { FormsModule } from '@angular/forms';
 import { from } from 'rxjs';
+import { HighestUpvoteDirective } from './highest-upvote.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { from } from 'rxjs';
     QuoteDetailComponent,
     QuoteFormComponent,
     StrikethroughDirective,
-    DateCountPipe
+    DateCountPipe,
+    HighestUpvoteDirective
   ],
   imports: [
     BrowserModule,

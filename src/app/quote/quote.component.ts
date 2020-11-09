@@ -41,7 +41,7 @@ export class QuoteComponent implements OnInit {
   }
 
   highestUpVote() {
-    let highestUpVoteQuote = new Quote(0, '', '', new Date());
+    let highestUpVoteQuote = new Quote(0, '', '',new Date());
     for (let i = 0; i < this.quotes.length; i++) {
       if (this.quotes[i].upvote > highestUpVoteQuote.upvote) {
         highestUpVoteQuote = this.quotes[i];

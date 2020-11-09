@@ -12,15 +12,16 @@
         <div *ngFor='let quote of quotes;let i = index'>
           <div class="card" id="top-card">
             <h6 appStrikethrough>{{quote.quoteName}} due on {{quote.completeDate|date|uppercase}}</h6>
-
             <!-- {{quote.quoteName}} -->
             <button (click)='toggleDetails(i)' class="btn btn-primary">View Details</button>
+            <!-- <li style="background-color: wheat;">Written By:{{quote.author}} due on {{quote.completeDate|date|uppercase}}</li> -->
+
             <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
             </app-quote-detail>
           </div>
           <button (click)="upVote(i)" class="btn btn-outline-info">Like {{quote.upvote}}</button>
           <button (click)="downVote(i)" class="btn btn-outline-info">Dislike {{quote.downvote}}</button>
-
+          <h2 *ngIf="quote === highestUpVote()" appHighUpvote><strong>Highest Likes.</strong> </h2>
 
 
         </div>
