@@ -18,8 +18,8 @@
             <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
             </app-quote-detail>
           </div>
-          <button (click)="upVote(i)" class="btn btn-outline-danger">Like {{quote.upvote}}</button>
-          <button (click)="downVote(i)" class="btn btn-outline-danger">Dislike {{quote.downvote}}</button>
+          <button (click)="upVote(i)" class="btn btn-outline-info">Like {{quote.upvote}}</button>
+          <button (click)="downVote(i)" class="btn btn-outline-info">Dislike {{quote.downvote}}</button>
 
 
 
